@@ -27,11 +27,43 @@
         <div class="main-block__part">
           <div class="main-block__info">
             <h3>Информация</h3>
+            <p class="mb-10">
+              Пять отдельных домиков, в 20 метрах от соснового бора, на пологом
+              склоне с видом на море.
+            </p>
+            <p class="mb-10">Выход на терассу 3X6 метров с видом на море.</p>
+            <p class="mb-10">
+              Бассейн 6Х10 местров с разными глубинами (60см и 155см).
+            </p>
+            <p class="mb-10">
+              Открытая зона отдыха перед бассейном с креслами-шезлонгами.
+            </p>
+            <p class="mb-10">
+              До моря 800 метров по тропине под уклон (15 минут к морю, 25 минут
+              обратно).
+            </p>
+            <p class="mb-10">Паркова возле домиков.</p>
+            <p class="mb-10">
+              В каждом домике есть все для комфортного проживания:
+            </p>
+            <ul class="test-list">
+              <li>
+                Спальня на 2 места на втором уровне и два спальных места на
+                первом уровне укомплектованы спальным белем.
+              </li>
+              <li>
+                Санузел с душевой кабиной, унитазом, умывальником, сушилкой,
+                комплектом полотенец и средством гигиены.
+              </li>
+              <li>Кондиционер.</li>
+              <li>Холодильник, чайник, варочная плита, микроволновая печь.</li>
+              <li>Коплект посуды, столовые приборы на 4 персоны.</li>
+              <li>Телевизор.</li>
+              <li>Фен, утюг.</li>
+            </ul>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.eiusmod tempor incididunt ut labore et dolore
-              magna aliqua. Ut enim ad minim veniam.
+              При строительстве использованы только экологически чистые
+              материалы, включая лакокрасочные материалы.
             </p>
           </div>
           <div class="main-block__info">
@@ -158,7 +190,7 @@ export default {
   &__head {
     position: relative;
     z-index: 0;
-    background-image: url("./assets/images/main-photo1.jpg");
+    background-image: url("./assets/images/main-photo2.jpeg");
     min-height: 700px;
 
     background-attachment: fixed;
@@ -178,7 +210,7 @@ export default {
       width: 100%;
       height: 100%;
       background-color: rgba(var(--main-color-rgb), 0.1);
-      background-image: linear-gradient(to bottom, transparent, rgb(0 0 0/1));
+      background-image: linear-gradient(to bottom, transparent, rgb(0 0 0/0.4));
     }
     &-content {
       position: absolute;
@@ -244,6 +276,21 @@ export default {
   display: flex;
   height: var(--header-size);
   align-items: center;
+}
+.test-list {
+  background: transparent;
+  list-style-type: circle;
+  list-style-position: inside;
+  padding: 0 20px;
+  margin: 0;
+}
+.test-list li {
+  //border-bottom: 1px solid #efefef;
+  list-style-type: circle;
+  padding: 10px 0;
+}
+.mb-10 {
+  margin-bottom: 10px;
 }
 @media (max-width: 768px) {
   .container {
