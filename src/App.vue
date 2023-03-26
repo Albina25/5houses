@@ -6,16 +6,16 @@
       </div>
       <div class="main-menu">
         <ul class="main-menu__list">
-          <li class="active main-menu__item">
+          <!--          <li class="active main-menu__item">
             <a class="text-uppercase main-menu__item_link" href="#">меню</a>
-          </li>
+          </li>-->
           <!--<li><a href="#">lifestyle</a></li>
           <li><a href="#">Food</a></li>
           <li><a href="#">Nature</a></li>
           <li><a href="#">photography</a></li>-->
         </ul>
       </div>
-      <div class="">Войти</div>
+      <div class="">Бронь домиков +7(999)999-99-99</div>
     </header>
     <main class="main-block">
       <section class="main-block__head container">
@@ -26,7 +26,7 @@
       <section class="main-block__content container">
         <div class="main-block__part">
           <div class="main-block__info">
-            <h3>Информация</h3>
+            <h3 class="mb-10">Информация</h3>
             <p class="mb-10">
               Пять отдельных домиков, в 20 метрах от соснового бора, на пологом
               склоне с видом на море.
@@ -49,7 +49,7 @@
             <ul class="test-list">
               <li>
                 Спальня на 2 места на втором уровне и два спальных места на
-                первом уровне укомплектованы спальным белем.
+                первом уровне укомплектованы спальным бельем.
               </li>
               <li>
                 Санузел с душевой кабиной, унитазом, умывальником, сушилкой,
@@ -57,7 +57,7 @@
               </li>
               <li>Кондиционер.</li>
               <li>Холодильник, чайник, варочная плита, микроволновая печь.</li>
-              <li>Коплект посуды, столовые приборы на 4 персоны.</li>
+              <li>Комплект посуды, столовые приборы на 4 персоны.</li>
               <li>Телевизор.</li>
               <li>Фен, утюг.</li>
             </ul>
@@ -67,34 +67,30 @@
             </p>
           </div>
           <div class="main-block__info">
-            <h3>Цены</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.eiusmod tempor incididunt ut labore et dolore
-              magna aliqua. Ut enim ad minim veniam.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.eiusmod tempor incididunt ut labore et dolore
-              magna aliqua. Ut enim ad minim veniam.
-            </p>
+            <h3 class="mb-10">Цены</h3>
+            <p>Стоимость за сутки - 5000р.</p>
+            <p>Депозит - 5000р.</p>
           </div>
           <div id="test" class="main-block__info">
-            <h3>Бронь</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.eiusmod tempor incididunt ut labore et dolore
-              magna aliqua. Ut enim ad minim veniam.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.eiusmod tempor incididunt ut labore et dolore
-              magna aliqua. Ut enim ad minim veniam.
-            </p>
+            <h3 class="mb-10">Бронирование номеров</h3>
+            <p>Бронирование домиков</p>
+            <!--<form>
+              <div class="form-field position-relative">
+                <input class="form-field__input" type="date" id="checkIn" />
+                <label class="form-field__label" for="checkIn">Заезд</label>
+              </div>
+              <div class="form-field position-relative">
+                <input class="form-field__input" type="date" id="checkOut" />
+                <label class="form-field__label" for="checkOut">Выезд</label>
+              </div>
+              <div class="form-field position-relative">
+                <input class="form-field__input" type="text" id="guests" />
+                <label class="form-field__label" for="guests">
+                  Кол-во гостей
+                </label>
+              </div>
+              <input type="submit" value="Показать" />
+            </form>-->
           </div>
         </div>
         <div class="main-block__part main-block__images">
@@ -292,6 +288,50 @@ export default {
 .mb-10 {
   margin-bottom: 10px;
 }
+.position-relative {
+  position: relative;
+}
+.form-field {
+  margin-bottom: 1rem;
+
+  &__input:not(:placeholder-shown) ~ .form-field__label {
+    top: 0;
+    font-size: 0.75rem;
+    //transform: translateY(-50%) scale(0.75);
+  }
+
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 0.3125rem;
+    display: flex;
+    transform: translateY(-50%);
+    pointer-events: none;
+    border: none;
+    background-color: #fff;
+    color: #757575;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    transition: top 0.1s ease-in-out, scale 0.1s ease-in-out;
+  }
+  &__input {
+    display: block;
+    width: 30%;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--gray-dark);
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid var(--gray);
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    appearance: none;
+  }
+}
 @media (max-width: 768px) {
   .container {
     padding: 0 1rem;
@@ -301,6 +341,11 @@ export default {
       flex-direction: column;
     }
     &__part {
+      width: 100%;
+    }
+  }
+  .form-field {
+    &__input {
       width: 100%;
     }
   }
